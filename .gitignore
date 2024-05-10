@@ -1,0 +1,30 @@
+# R specific
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Ignore files produced by R CMD build
+*.tar.gz
+
+# Ignore RStudio-specific files
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Ignore generated HTML files
+*.html
+
+# Ignore shiny app logs
+shiny.log
+
+# Ignore R Markdown cache
+*_cache/
+
+# Ignore knitr output
+*_files/
+*.utf8.md
+
+# Ignore macOS metadata files
+.DS_Store
