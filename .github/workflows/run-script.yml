@@ -1,0 +1,13 @@
+name: Run R script
+
+on:
+    workflow_dispatch:
+
+jobs:
+    call-env-setup:
+        uses: ./.github/workflows/setup-env.yml
+    run:
+        runs-on: ubuntu-latest
+        steps:   
+            - name: Run R script
+              run: Rscript sample-script.R
