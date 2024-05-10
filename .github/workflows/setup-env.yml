@@ -21,8 +21,5 @@ jobs:
             - name: Restore renv environment
               run: Rscript -e 'renv::restore()'
         
-            - name: Install dependencies
-              run: Rscript -e 'renv::install()'
-        
             - name: Run R script
               run: Rscript sample-script.R
