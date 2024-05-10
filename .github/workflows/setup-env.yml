@@ -15,11 +15,17 @@ jobs:
               with:
                 r-version: '4.3.3'
         
-            - name: Install renv
-              run: Rscript -e 'install.packages("renv")'
-        
-            - name: Restore renv environment
-              run: Rscript -e 'renv::restore()'
+            - name: Cache packages
+            uses: actions/cache@v3
+            with:
+                path: ${{ env.RENV_PATHS_ROOT }}
+                key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
+                restore-keys: |
+                ${{ runner.os }}-renv-
+            - name: Restore packages
+            run: |
+                if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
+                renv::restore()
         
             - name: Run R script
               run: Rscript sample-script.R
