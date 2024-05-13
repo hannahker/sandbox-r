@@ -1,9 +1,10 @@
 # Load necessary libraries
 library(dplyr)
+library(logging)
 
-print("Sample environment variables")
-print(Sys.getenv("TEST"))
-print(Sys.getenv("FIRST_RUN"))
+log_info("Sample environment variables...")
+log_info(paste0("Test: ", Sys.getenv("TEST")))
+log_info(paste0("First run: ", Sys.getenv("FIRST_RUN")))
 
 # Sample data (you can replace this with your own dataset)
 data <- data.frame(
@@ -14,10 +15,6 @@ data <- data.frame(
   Score = c(85, 90, 75, 80, 88)
 )
 
-# Print the original data
-cat("Original Data:\n")
-print(data)
-
 # Use dplyr to perform data processing
 processed_data <- data %>%
   mutate(Age_Group = ifelse(Age < 30, "Young", "Old")) %>%
@@ -25,6 +22,4 @@ processed_data <- data %>%
   arrange(desc(Score)) %>%
   select(ID, Name, Age_Group, Score)
 
-# Print the processed data
-cat("\nProcessed Data:\n")
-print(processed_data)
+log_info("...Finished processing data")
