@@ -1,6 +1,10 @@
 # Load necessary libraries
 library(dplyr)
 
+print("Sample environment variables")
+print(Sys.getenv("TEST"))
+print(Sys.getenv("FIRST_RUN"))
+
 # Sample data (you can replace this with your own dataset)
 data <- data.frame(
   ID = c(1, 2, 3, 4, 5),
