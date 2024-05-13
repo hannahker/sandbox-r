@@ -17,7 +17,7 @@ runs:
                 ${{ runner.os }}-renv-
 
         - name: Restore packages
-          shell: Rscript
+          shell: Rscript {0}
           run: |
             if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
             renv::restore()
