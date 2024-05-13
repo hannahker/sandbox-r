@@ -1,13 +1,17 @@
 name: Run R script
 
 on:
-    workflow_dispatch:
+    workflow_run:
+      workflows: ["Set up R environment"]
+      types:
+        - completed
 
 jobs:
-    call-env-setup:
-        uses: ./.github/workflows/setup-env.yml
     run:
         runs-on: ubuntu-latest
         steps:   
+            - name: Checkout repository
+              uses: actions/checkout@v3
+
             - name: Run R script
               run: Rscript sample-script.R
