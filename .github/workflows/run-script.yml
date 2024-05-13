@@ -2,10 +2,28 @@ name: Run R script
 
 on:
     workflow_dispatch:
+      inputs:
+        first_run:
+          required: true
+          type: choice
+          default: "FALSE"
+          options:
+            - "TRUE"
+            - "FALSE"
+        test:
+          required: true
+          type: choice
+          default: "FALSE"
+          options:
+            - "TRUE"
+            - "FALSE"
 
 jobs:
     run:
         runs-on: ubuntu-latest
+        env:
+          TEST: ${{ inputs.test || 'FALSE' }}
+          FIRST_RUN: ${{ inputs.first_run || 'FALSE' }}
         steps:   
             - name: Checkout repository
               uses: actions/checkout@v3
