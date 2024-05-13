@@ -11,7 +11,7 @@ jobs:
               uses: actions/checkout@v3
 
             - name: Set up environment
-              uses: ./github/workflows/action
+              uses: ./
 
             - name: Run R script
               run: Rscript sample-script.R
