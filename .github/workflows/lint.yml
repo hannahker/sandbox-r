@@ -24,7 +24,7 @@ jobs:
               run: install.packages(c("lintr"), dependencies = TRUE) 
 
             - name: Lint
-            run: lintr::lint_package()
+            run: lintr::lint_dir()
             shell: Rscript {0}
             env:
                 LINTR_ERROR_ON_LINT: true
