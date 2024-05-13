@@ -1,10 +1,5 @@
 name: Set up
 description: Build R environment for monitoring
-inputs:
-    renv_paths_root:
-      description: 'renv path'
-      required: true
-      default: ~/.cache/R/renv
 runs:
     using: "composite"
     steps:
@@ -16,7 +11,7 @@ runs:
         - name: Cache packages
           uses: actions/cache@v3
           with:
-            path: ${{ inputs.renv_paths-root }}
+            path: ~/.cache/R/renv
             key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
             restore-keys: |
                 ${{ runner.os }}-renv-
