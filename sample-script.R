@@ -7,7 +7,7 @@ log_info(paste0("Test: ", Sys.getenv("TEST")))
 log_info(paste0("First run: ", Sys.getenv("FIRST_RUN")))
 
 # Should throw a linting error
-x <- 1 + 2
+x <- 1+2
 
 # Sample data (you can replace this with your own dataset)
 data <- data.frame(
