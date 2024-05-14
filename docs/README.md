@@ -1,5 +1,9 @@
 # Documentation Summary
 
+Sample summary plot below...
+
+![test](random_data_plot.png)
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vehicula scelerisque mauris in feugiat. Etiam maximus sem ac euismod fermentum. Proin molestie egestas ante eget congue. Phasellus eget lectus felis. Proin eu suscipit dui, ultrices pharetra turpis. Praesent sed lobortis nisi. Sed lacus risus, tristique in porttitor ornare, interdum at ipsum. Pellentesque enim augue, sagittis a lacinia eget, convallis at justo. In molestie porta metus, a tincidunt felis pellentesque sit amet. Donec eleifend nisl purus, sed congue ligula cursus eget. Praesent porttitor felis nec nunc faucibus, vel vestibulum nunc dictum. Cras dignissim nunc tellus, nec ullamcorper sem porta vitae.
 
 ## Another header
