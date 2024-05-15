@@ -1,6 +1,6 @@
 # Load necessary libraries
 library(dplyr)
-library(logging)
+library(logger)
 
 log_info("Sample environment variables...")
 log_info(paste0("Test: ", Sys.getenv("TEST")))
