@@ -1,6 +1,7 @@
 # Load necessary libraries
 library(dplyr)
 library(logger)
+box::use(cs = ./utils/cloud)
 
 log_info("Sample environment variables...")
 log_info(paste0("Test: ", Sys.getenv("TEST")))
@@ -14,6 +15,8 @@ data <- data.frame(
   Gender = c("M", "F", "M", "F", "M"),
   Score = c(85, 90, 75, 80, 88)
 )
+
+cs$update_az_file(data, "sample.parquet", "dev")
 
 # Use dplyr to perform data processing
 processed_data <- data %>%
