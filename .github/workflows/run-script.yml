@@ -26,6 +26,7 @@ jobs:
           FIRST_RUN: ${{ inputs.first_run || 'FALSE' }}
           DSCI_AZ_SAS_DEV: ${{ secrets.DSCI_AZ_SAS_DEV }}
           DSCI_AZ_KEY_DEV: ${{ secrets.DSCI_AZ_KEY_DEV }}
+          DSCI_AZ_ENDPOINT: ${{ secrets.DSCI_AZ_ENDPOINT }}
         steps:   
             - name: Checkout repository
               uses: actions/checkout@v3
