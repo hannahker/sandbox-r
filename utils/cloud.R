@@ -24,7 +24,7 @@ blob_endpoint_dev <- az$blob_endpoint(
   sas = Sys.getenv("DSCI_AZ_SAS_DEV")
 )
 
-print(Sys.getenv("DSCI_AZ_SAS_DEV"))
+print(Sys.getenv("DSCI_AZ_ENDPOINT"))
 print(azure_endpoint_url("blob", "dev"))
 print(azure_endpoint_url("blob", "prod"))
 
