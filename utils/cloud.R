@@ -21,9 +21,11 @@ azure_endpoint_url <- function(service = c("blob", "file"), stage = c("prod", "d
 # gets the Dsci blob endpoints using the HDX Signals SAS
 blob_endpoint_dev <- az$blob_endpoint(
   endpoint = azure_endpoint_url("blob", "dev"),
-  key = Sys.getenv("DSCI_AZ_KEY_DEV")
+  # key = Sys.getenv("DSCI_AZ_KEY_DEV")
+  sas = Sys.getenv("DSCI_AZ_SAS_DEV")
 )
 
+print(Sys.getenv("DSCI_AZ_SAS_DEV"))
 print(azure_endpoint_url("blob", "dev"))
 print(azure_endpoint_url("blob", "prod"))
 
