@@ -16,7 +16,7 @@ data <- data.frame(
   Score = c(85, 90, 75, 80, 88)
 )
 
-# cs$update_az_file(data, "sample.parquet", "dev")
+cs$update_az_file(data, "sample.parquet", "dev")
 
 # Use dplyr to perform data processing
 processed_data <- data %>%
