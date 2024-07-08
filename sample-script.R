@@ -7,6 +7,9 @@ log_info("Sample environment variables...")
 log_info(paste0("Test: ", Sys.getenv("TEST")))
 log_info(paste0("First run: ", Sys.getenv("FIRST_RUN")))
 
+# Should throw a linting error
+x <- 1 + 2
+
 # Sample data (you can replace this with your own dataset)
 data <- data.frame(
   ID = c(1, 2, 3, 4, 5),
